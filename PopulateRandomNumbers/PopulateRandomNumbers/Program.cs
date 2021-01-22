@@ -17,7 +17,7 @@ namespace PopulateRandomNumbers
 			{
 				squares.Add(i);
 			}
-			//squares.Shuffle();
+			squares.Shuffle();
 
 			// Generate the AFC and NFC numbers 0 - 9
 			var afc = new List<int>();
@@ -30,7 +30,7 @@ namespace PopulateRandomNumbers
 			afc.Shuffle();
 			nfc.Shuffle();
 
-			//using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"D:\code\ChannahonBaseball\PopulateRandomNumbers.csv"))
+			using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"D:\code\ChannahonBaseball\PopulateRandomNumbers.csv"))
 			{
 				// For each NFC number
 				for (int i = 0; i < 10; i++)
@@ -38,8 +38,8 @@ namespace PopulateRandomNumbers
 					// For each AFC number
 					for (int j = 0; j < 10; j++)
 					{
-						//file.WriteLine($"{squares[(i * 10) + j]},{nfc[i]},{afc[j]}");
-						Console.WriteLine($"{squares[(i * 10) + j]},{nfc[i]},{afc[j]}");
+						file.WriteLine($"{squares[(i * 10) + j]},{nfc[i]},{afc[j]}");
+						//Console.WriteLine($"{squares[(i * 10) + j]},{nfc[i]},{afc[j]}");
 					}
 				}
 			}
