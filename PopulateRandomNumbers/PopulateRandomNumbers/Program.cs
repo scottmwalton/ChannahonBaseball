@@ -30,6 +30,7 @@ namespace PopulateRandomNumbers
 			afc.Shuffle();
 			nfc.Shuffle();
 
+			// Write Output to file
 			using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"D:\code\ChannahonBaseball\PopulateRandomNumbers.csv"))
 			{
 				// For each NFC number
